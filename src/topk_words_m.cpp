@@ -85,8 +85,8 @@ int main(int argc, char *argv[]) {
 	});
   }
 
-  for (auto &th : threads) {
-	th.join(); // Ожидаем завершения всех потоков
+  for (auto &thread : threads) {
+	thread.join(); // Ожидаем завершения всех потоков
   }
 
   print_topk(std::cout, freq_dict, TOPK);
